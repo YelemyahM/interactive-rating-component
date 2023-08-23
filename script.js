@@ -32,6 +32,5 @@ submit.addEventListener("click", () => {
     sectionRating.style.display = "none"
     sectionThanks.style.display = "flex"
     result.append(`You selected ${dataValue} out of 5`)
-    //console.log(dataValue);
   }
 })
