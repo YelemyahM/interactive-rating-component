@@ -1,18 +1,151 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Overpass", sans-serif;
+  background: #141519;
+  color: #7d8591;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 700;
+}
+
+section {
+  background: #171e28;
+  padding: 30px;
+  width: 380px;
+  height: 380px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.star {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  background: #262f38;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.numbers div {
+  display: block;
+  background: #262f38;
+  position: relative;
+  bottom: -40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.numbers div:active,
+.numbers div:hover {
+  background: #fb7413 !important;
+  color: #fff !important;
+}
+
+#submit {
+  background: #fb7413;
+  color: #fff;
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  bottom: -50px;
+  transition: all 0.3s;
+}
+
+#submit:hover {
+  color: #fb7413;
+  background: #fff;
+}
+
+.thanks {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+
+.thanks img {
+  width: 200px;
+  align-self: center;
+}
+
+.result {
+  background: #233133;
+  color: #fb7413;
+  display: block;
+  width: fit-content;
+  border-radius: 20px;
+  margin: 20px auto 0 auto;
+  padding: 7px 20px 5px 20px;
+}
+
+.title {
+  font-weight: 700;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 20px;
 }
 
 .attribution {
   width: 100%;
   font-size: 11px;
   text-align: center;
-  position: fixed;
-  bottom: 10px;
+  position: absolute;
+  bottom: 0;
   margin: 0 auto;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+  section {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .rating {
+    position: relative;
+  }
+
+  .numbers div {
+    width: 2.5em;
+    height: 2.5em;
+  }
 }
